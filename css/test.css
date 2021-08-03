@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+ul {
+    padding: 0;
+  }
+  
+li {
+    color: white;
+    background: #76d19c;
+    line-height: 2.5;
+    padding: 0.5em 0.5em 0.5em 1.0em;
+    border-bottom: 10px solid white;
+    list-style-type: none;
+    font-weight: bold;
+    width: 40%;
+    position: relative;
+    font-size: x-large;
+}
+
+li:after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    transform:rotate(45deg);
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
