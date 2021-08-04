@@ -25,3 +25,21 @@ for (i = 0; i < 5; i++) {
     });
 }
 
+//画面遷移処理
+$("#test").click(function()  {
+    location.href="index2.html";
+    return false;
+});
+var elem = document.getElementById("test");
+elem.addEventListener("mouseover", function (event) {
+    event.target.style.backgroundColor = "orange";
+}, false);
+elem.addEventListener("mouseleave", function (event) {
+    event.target.style.backgroundColor = "#76d19c";
+}, false);
+$("#test").hover(function() {
+    $(this).css('cursor','pointer');
+}, function() {
+    $(this).css('cursor','auto');
+});
+

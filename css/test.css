@@ -34,3 +34,20 @@ img {
     width: 50%;
     height: auto;
 }
+
+.test {
+    padding: 0;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#test {
+    color: white;
+    margin: 10px 42%;
+    background: rgb(0, 140, 255);
+    line-height: 2.0;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border-bottom: 10px solid white;
+    font-weight: bold;
+    font-size: x-large;
+}
