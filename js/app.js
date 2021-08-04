@@ -1,19 +1,27 @@
-(function() {
+var link_url = ["http://www.scsk-hokkaido.co.jp/",
+                "https://www.scsk.jp/product/common/voic_finder/index.html",
+                "https://nlp100.github.io/ja/",
+                "https://www.javadrive.jp/javascript/",
+                "https://dotinstall.com/lessons/basic_backbonejs"]
 
-    //MOdel
-
-    var Task = Backbone.Model.extend({
-        defaults: {
-            title: "do something!",
-            completed: false
-        }
+for (i = 0; i < 5; i++) {
+    //マウスオーバー設定
+    var elem = document.getElementById("btn" + i);
+    elem.addEventListener("mouseover", function (event) {
+        event.target.style.backgroundColor = "orange";
+    }, false);
+    elem.addEventListener("mouseleave", function (event) {
+        event.target.style.backgroundColor = "#76d19c";
+    }, false);
+    $("#btn" + i).hover(function() {
+        $(this).css('cursor','pointer');
+    }, function() {
+        $(this).css('cursor','auto');
     });
-
-    var task1 = new Task({
-        title: 'do it!',
-        completed: true
+    //画面遷移処理
+    $("#btn" + i).click(function()  {
+        location.href=link_url[this.id.slice(-1)];
+        return false;
     });
+}
 
-    console.log(task1.toJSON());
-
-})();
